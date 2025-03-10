@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+    <circle cx="28" cy="28" r="26" stroke="white" strokeWidth="4" opacity="0.2" />
+    <circle
+        cx="28"
+        cy="28"
+        r="26"
+        stroke="white"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeDasharray={circleLength}
+        strokeDashoffset={circleLength - (progress / 100) * circleLength}
+        className="progress-circle"
+        transform="rotate(-90 28 28)"
+    />
+</svg>

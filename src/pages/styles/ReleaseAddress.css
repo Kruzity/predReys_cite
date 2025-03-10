@@ -1,0 +1,68 @@
+.release-address{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--M, 32px);
+}
+.release-address-title{
+    margin: 0px 16px;
+    margin-top: 68px;
+    align-self: stretch;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 36px */
+}
+.address-container{
+    display: flex;
+    margin: 0px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--XS, 8px);
+    width: calc(100% - 32px);
+}
+.address-item{
+    display: flex;
+    width: calc(100% - 32px);
+    padding: var(--S, 16px);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background: var(--bg-lightBlue, #2E2E38);
+}
+.address-item.selected {
+    background: #255328 !important; 
+  }
+.address-item-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--S, 16px);
+}
+.adress-title{
+    align-self: stretch;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%; 
+    margin: 0;
+}
+.adress-btn-container button{
+    background: none; 
+    padding: 0;
+    margin-right: 16px;
+    color: var(--white, #FFF);
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 13.8px */
+    letter-spacing: -0.36px;
+}
+.pinned-icon{
+    display: inline-block;
+}

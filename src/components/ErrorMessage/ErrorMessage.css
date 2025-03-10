@@ -1,0 +1,141 @@
+.error-message-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 480px;
+    background: #000;
+    color: white;
+    text-align: center;
+    border-radius: 24px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.5);
+    animation: slide-up 0.5s ease-out;
+    overflow: hidden; 
+    z-index: 22;
+}
+.error-message-img {
+    position: relative;
+    width: 212px;
+    height: 212px;
+    margin: 0 auto; 
+    margin-top: 24px;
+    overflow: hidden; 
+}
+.error-message-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: contain; 
+}
+.error-img-1,
+.error-img-2,
+.error-img-3,
+.error-img-4,
+.error-img-5 {
+    animation: circleAnimation 2s infinite;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.error-img-knob {
+    z-index: 10; 
+    animation: knobAppear 0.5s ease-out forwards;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@keyframes circleAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+@keyframes knobAppear {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+.error-message{
+    display: flex;
+    flex-direction: column;
+}
+.error-message-title{
+    align-self: stretch;
+    color: #FFF;
+    text-align: center;
+    font-family: "Ford Antenna";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+    margin: 0;
+    width: 100%;
+    margin-bottom: 16px;
+}
+.error-message-description{
+    margin: 0 auto;
+    width: 174px;
+    color: #FFF;
+    text-align: center;
+    font-family: "SF Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; 
+    letter-spacing: -0.42px;
+}
+.error-support-btn {
+    display: flex;
+    width: calc(100% - 48px);
+    height: 54px;
+    padding: 15px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #FFF;
+    color: var(--bg-darkBlue, #22222A);
+    text-align: center;
+    margin-bottom: 24px;
+    margin-left: 24px;
+    /* button */
+    font-family: "SF Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%; 
+    letter-spacing: -0.48px;
+}
+.error-support-btn:hover {
+    background: rgba(255, 255, 255, 0.8);
+}

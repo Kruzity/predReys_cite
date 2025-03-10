@@ -1,0 +1,90 @@
+.request-flex-wrap {
+    margin: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.request-details-trailerinfo {
+    margin: 32px 16px;
+}
+.request-details-trailerinfo-description {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.flex-address-cont {
+    margin: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.flex-address-title{
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%; /* 16.1px */
+}
+.flex-address-card{
+    display: flex;
+    padding: var(--S, 16px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: var(--bg-lightBlue, #2E2E38);
+    color: #FFF;
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 13.8px */
+    letter-spacing: -0.36px;
+}
+.request-recipient-container {
+    margin: 32px 16px;
+}
+.request-recipient-title {
+    margin: 0;
+    margin-bottom: 4px;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%; /* 16.1px */
+}
+.request-recipient-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.my-request-text-section p{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    color: var(--white, #FFF);
+    height: auto;
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 13.8px */
+    letter-spacing: -0.36px;
+    opacity: 0.8;
+}
+.my-request-text-section span {
+    width: 110px;
+    display: inline-block;
+}
+.req-width {
+    width: 180px;
+    display: flex;
+    justify-content: end;
+    text-align: end;
+    white-space: normal; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+}

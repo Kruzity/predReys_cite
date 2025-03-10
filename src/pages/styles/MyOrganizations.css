@@ -1,0 +1,81 @@
+.org-title-section{
+    display: flex;
+    width: 288px;
+    margin-top: 100px;
+    margin-left: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--S, 16px);
+}
+.org-title{
+    margin: 0;
+    align-self: stretch;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+}
+.org-title-description{
+    width: 183px;
+    color: var(--white, #FFF);
+    font-family: "SF Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; 
+    letter-spacing: -0.42px;
+    opacity: 0.8;
+}
+
+.org-list-card{
+    align-items: center;
+    padding: 0;
+    margin: 0px 16px;
+}
+
+.org-list-card li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 8px;
+    background: var(--bg-lightBlue, #2E2E38);
+    border-radius: 10px;
+    cursor: pointer;
+}
+h2{
+    margin: 16px 0px 32px 16px;
+    width: 280px;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%; /* 16.1px */
+}
+.org-info-container{
+    margin-bottom: 16px;
+}
+.org-info-container p{
+    margin: 0px 0px 4px 16px;
+    color: var(--white, #FFF);
+    height: 14px;
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 13.8px */
+    letter-spacing: -0.36px;
+    opacity: 0.6;
+  
+}
+.org-info-container p span{
+    width: 80px;
+    display: inline-block;
+    
+}
+.org-action-icon{
+    margin-right: 16px;
+}

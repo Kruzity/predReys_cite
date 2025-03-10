@@ -1,0 +1,24 @@
+.header-navigate-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 32px);
+    height: 60px;
+    margin: 16px 0px 0px 16px;
+    
+}
+.header-btn-back,
+.header-btn-menu{
+    display: flex;
+    width: 60px;
+    height: 60px;
+    padding: 12.754px;
+    justify-content: center;
+    align-items: center;
+    gap: 5.797px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #2E2E38;
+    border-style: none;
+}

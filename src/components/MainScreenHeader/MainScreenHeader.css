@@ -1,0 +1,71 @@
+.header{
+    display: flex;
+    width: calc(100%-16px);
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px;
+}
+.header-logo{
+    height: 45px;
+}
+.header-logo img{
+    margin-top: 8px;
+}
+.header-logo-container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    
+}
+.logo-container1{
+    width: 20.297px;
+    height: 11.733px;
+    flex-shrink: 0;
+    border-radius: 3.302px;
+    background: linear-gradient(180deg, #FF6363 0%, #F00 100%);
+    margin-right: 3.2px;
+}
+.logo-container2{
+    width: 23.146px;
+    height: 15.289px;
+    flex-shrink: 0;
+    border-radius: 3.302px;
+    background: linear-gradient(180deg, #FFEF63 0%, #FFC700 97.67%);
+    margin-right: 3.2px;
+}
+.logo-container3{
+    width: 29.912px;
+    height: 18.489px;
+    flex-shrink: 0;
+    border-radius: 3.302px;
+    background: linear-gradient(180deg, #9EFF00 0%, #289900 100%);
+}
+.help-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    border-radius: 8px;
+    background: #2E2E38;
+    padding: 10px 18px 10px 10px;
+    width: 128px;
+    height: 44px;
+    border-style: none;
+}
+.btn-img{
+    width: 24px;
+    height: 24px;
+}
+.btn-text{
+    align-items: end;
+    width: 110px;
+    height: 16px;
+    color: #FFF;
+    text-align: center;
+    font-family: "SF Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%; /* 16.1px */
+    letter-spacing: -0.42px;
+}

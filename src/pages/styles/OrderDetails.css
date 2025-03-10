@@ -1,0 +1,59 @@
+.my-orders-details-title-section {
+    margin: 80px 0px 16px 16px;
+}
+.my-orders-header-title {
+    margin: 0;
+    color: var(--white, #FFF);
+    font-family: "SF Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 16.1px */
+    letter-spacing: -0.42px;
+    opacity: 0.8;
+}
+.my-orders-details-title {
+    margin: 16px 0px 0px 0px;
+    align-self: stretch;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 36px */
+}
+.orders-details-text-section {
+    margin-left: 16px;
+    margin-bottom: 16px;
+}
+.orders-details-text-section p{
+    margin: 0px 0px 4px 0px;
+    color: var(--white, #FFF);
+    height: 14px;
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 13.8px */
+    letter-spacing: -0.36px;
+    opacity: 0.6;
+}
+.orders-details-text-section span{
+    width: 110px;
+    display: inline-block;
+}
+.order-details-copy-btn {
+    padding: 0;
+    margin: 32px 0px 16px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #2E2E38;
+    color: var(--accentOutlune, #9AE473);
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 13.8px */
+    letter-spacing: -0.36px;
+}

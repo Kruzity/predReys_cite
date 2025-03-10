@@ -1,0 +1,94 @@
+.driver-details-container {
+    display: flex;
+    flex-direction: column;
+}
+.driver-details-section{
+    margin: 0px 16px;
+}
+.driver-details-title {
+    align-self: stretch;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    margin: 100px 0px 0px 0px;
+}
+.driver-details-maininfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.row {
+    display: flex;
+    justify-content: space-between; /* Размещаем элементы строки по краям */
+    align-items: center; /* Выравнивание по вертикали */
+    height: 14px;
+    color: #FFF;
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 13.8px */
+    letter-spacing: -0.36px;
+    opacity: 0.8;
+}
+.row span {
+    flex: 1; /* Устанавливаем ширину для span */
+    text-align: left; /* Текст выравнивается влево */
+}
+.row p {
+    flex: 1; /* Устанавливаем ширину для p */
+    text-align: right; /* Текст выравнивается вправо */
+}
+.license-title {
+    margin: 0;
+    margin-bottom: 8px;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%;
+}
+.driver-snils-card{
+    display: flex;
+    justify-content: space-between; /* Размещаем элементы строки по краям */
+    align-items: center; /* Выравнивание по вертикали */
+    height: 14px;
+    color: #FFF;
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 13.8px */
+    letter-spacing: -0.36px;
+    opacity: 0.8;
+}
+.driver-details-section{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.driver-details-section p {
+    margin: 4px 0;
+    color: #FFF;
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 13.8px */
+    letter-spacing: -0.36px;
+    opacity: 0.8;
+}
+.driver-details-section p span {
+    width: 80px;
+    display: inline-block;
+    text-align: left;
+}
+.driver-license-info-description{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}

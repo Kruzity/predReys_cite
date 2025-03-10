@@ -1,0 +1,73 @@
+.my-orders-title-section{
+    margin: 100px 0px 32px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.my-orders-title{
+    margin: 0;
+    align-self: stretch;
+    color: #FFF;
+    font-family: "Ford Antenna";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 36px */
+}
+.my-orders-title-description{
+    margin: 0;
+    width: 208px;
+    color: #FFF;
+    font-family: "SF Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 16.1px */
+    letter-spacing: -0.42px;
+    opacity: 0.8;
+}
+.my-orders-list-content-empty{
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+    margin-left: 16px;
+    margin-bottom: 8px;
+    background: var(--bg-lightBlue, #2E2E38);
+    border-radius: 10px;
+}
+.my-orders-list-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: calc(100% - 32px);
+    margin-left: 16px;
+    margin-bottom: 8px;
+    background: var(--bg-lightBlue, #2E2E38);
+    border-radius: 10px;
+}
+.my-orders-text-section{
+    margin-bottom: 16px;
+}
+.my-orders-text-section p{
+    margin: 0px 0px 4px 16px;
+    color: var(--white, #FFF);
+    height: auto;
+    display: flex;
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 13.8px */
+    letter-spacing: -0.36px;
+    opacity: 0.6;
+    white-space: normal; /* Позволяет тексту переноситься */
+    word-wrap: break-word; /* Переносит длинные слова */
+    overflow-wrap: break-word;
+}
+.my-orders-text-section span{
+    width: 110px;
+    display: inline-block;
+}
+.org-width {
+    width: 140px;
+}

@@ -1,0 +1,965 @@
+.waybills{
+    margin: 0px 16px;
+    
+}
+.request-form {
+    display: flex;
+    flex-direction: column;
+}
+.form-content{
+    height: 100vh;
+    position: relative;
+}
+.form-title {
+    margin: 58px 0px 32px 0px;
+    align-self: stretch;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+}
+.form-title-container{
+    margin: 58px 0px 32px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-title-h1{
+    margin: 0;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 36px */
+}
+.form-title-description{
+    margin: 0;
+    width: 288px;
+    align-self: stretch;
+    color: var(--white, #FFF);
+    font-family: "SF Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 16.1px */
+    letter-spacing: -0.42px;
+    opacity: 0.8;
+}
+.form-list {
+    height: 100vh;
+}
+.form-list-waybill {
+    height: 100%;
+}
+.form-list-card{
+    align-items: center;
+    padding: 0;
+    height: 100vh;
+}
+.hover-form{
+    display: flex;
+    flex-direction: row;
+    
+    padding: var(--S, 16px);
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    background: #2E2E38;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.selected {
+    background-color: #255328 !important; 
+}
+.form-list-card-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    
+}
+.form-img-icon{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: var(--S, 8px);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 80px;
+    background: var(--bg-darkBlue, #22222A);
+}
+.form-list-card-title{
+    margin: 0px 0px 16px 0px;
+    width: 220px;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%; /* 16.1px */
+}
+.form-trailer-container {
+    height: 100vh;
+    overflow: auto;
+}
+.driver-name-null{
+    margin: 0;
+}
+.form-list-card-info-container{
+    width: 244px;
+}
+.form-list-card-info-container p{
+    margin: 0px 0px 4px 0px;
+    color: var(--white, #FFF);
+    height: 14px;
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 13.8px */
+    letter-spacing: -0.2px;
+    opacity: 0.6;
+}
+.form-list-card-info-container span{
+    width: 80px;
+    display: inline-block;
+}
+.footer-single-btn-container{
+    display: flex;
+    position: sticky;
+    width: calc(100% - 16px); 
+    background: #22222A;
+    bottom: 0;
+    padding: 8px;
+    padding-left: 8px;
+    align-items: center;
+}
+.footer-single-btn[disabled] {
+    background: var(--bg-lightBlue-2, #393A46);
+    color: var(--white, #FFF);
+    text-align: center;
+    /* button */
+    font-family: "SF Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%; /* 18.4px */
+    letter-spacing: -0.48px;
+    opacity: 0.2;
+}
+.footer-single-btn{
+    display: flex;
+    width: 100%;
+    height: 48px;
+    padding: 15px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: #FFF;
+    color: var(--bg-darkBlue, #22222A);
+    text-align: center;
+    /* button */
+    font-family: "SF Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%; /* 18.4px */
+    letter-spacing: -0.48px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+.footer-btn-section-container{
+    display: flex;
+    position: fixed; 
+    bottom: 0;
+    background: #22222A;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: calc(100% - 48px);
+    gap: 8px;
+    margin-bottom: 4px;
+}
+.footer-form-skip-btn{
+    display: flex;
+    width: 50%;
+    padding: 24px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-darkBlue, #22222A);
+    color: var(--white, #FFF);
+    text-align: center;
+    /* buttonSmall */
+    font-family: "SF Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%; /* 16.1px */
+    letter-spacing: -0.42px;
+}
+.footer-form-next-btn{
+    display: flex;
+    width: 50%;
+    height: 48px;
+    padding: 15px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: #FFF;
+    color: var(--bg-darkBlue, #22222A);
+    text-align: center;
+    /* button */
+    font-family: "SF Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%; /* 18.4px */
+    letter-spacing: -0.48px;
+}
+.footer-form-next-btn[disabled] {
+    background: var(--bg-lightBlue-2, #393A46);
+    color: var(--white, #FFF);
+    text-align: center;
+    /* button */
+    font-family: "SF Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%; /* 18.4px */
+    letter-spacing: -0.48px;
+    opacity: 0.2;
+}
+.form-address-item{
+    display: flex;
+    width: calc(100% - 32px);
+    padding: var(--S, 16px);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    background: var(--bg-lightBlue, #2E2E38);
+    margin-bottom: 8px;
+}
+.date-title {
+    margin: 0;
+    margin-top: 58px;
+    margin-bottom: 32px;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 36px */
+}
+.date-description {
+    margin: 0;
+    margin-bottom: 32px;
+    color: var(--accentOutlune, #9AE473);
+    font-family: "Ford Antenna";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%; /* 16.1px */
+}
+.add-work-days-btn-section {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--S, 16px);
+    align-self: stretch;
+}
+.workdays-btn-style {
+    background: var(--bg-darkBlue, #22222A);
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    gap: 8px;
+}
+.date-chips-container {
+    margin: 32px 0px 16px 0px;
+    width: calc(100% - 32px);
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 4px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+.date-chips {
+    margin: 0;
+    border-radius: 8px;
+    padding: 8px;
+    background: var(--bg-lightBlue-2, #393A46);
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%; 
+    cursor: pointer;
+}
+.calendar-container {
+    position: absolute !important; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 9999; 
+}
+.react-datepicker__day--today {
+    padding: -1px;
+    color: black;
+    border-radius: 100px;
+    background-color: #fff;
+}
+.react-datepicker__day--keyboard-selected:not([aria-disabled=true]):hover, .react-datepicker__month-text--keyboard-selected:not([aria-disabled=true]):hover, .react-datepicker__quarter-text--keyboard-selected:not([aria-disabled=true]):hover, .react-datepicker__year-text--keyboard-selected:not([aria-disabled=true]):hover {
+    background: none;
+}
+.react-datepicker__day--today.react-datepicker__day--selected {
+    background: none !important;
+    color: black !important;
+    border: none; 
+}
+.react-datepicker__day--selected {
+    border-radius: 100px;
+    background: none !important;
+    color: black !important;
+}
+.react-datepicker__day--selected:hover,
+.react-datepicker__day--today.react-datepicker__day--selected:hover {
+    background: none !important;
+    color: black !important;
+    border: none !important; 
+} */
+
+
+
+.react-datepicker__day--highlighted {
+    border-radius: 100px;
+    background: var(--bg-accentFill, #255328);
+    color: #FFF;
+}
+.react-datepicker__day--highlighted:hover {
+    border-radius: 100px;
+}
+.react-datepicker__day--keyboard-selected, .react-datepicker__month-text--keyboard-selected, .react-datepicker__quarter-text--keyboard-selected, .react-datepicker__year-text--keyboard-selected {
+    border-radius: 100px;
+    background: none;
+    color: black !important;
+}
+.react-datepicker__day:not([aria-disabled=true]):hover {
+    border-radius: 100px;
+}
+.react-datepicker__day--in-selecting-range {
+    border-radius: 100px;
+    background: black;
+    color: #FFF !important;
+}
+.react-datepicker__day--in-range {
+    border-radius: 100px;
+    background: var(--bg-accentFill, #255328) !important;
+    color: #FFF !important;
+}
+.react-datepicker__day--in-range:hover {
+    border-radius: 100px;
+    background: var(--bg-accentFill, #255328) !important;
+    color: #FFF !important;
+}
+.react-datepicker {
+    position: relative;
+    border-top: 1px;
+    border-bottom: none;
+    /* border-radius: 28px*/
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    z-index: 100; 
+}
+.react-datepicker__close-icon::after{
+    background: var(--bg-accentFill, #255328);
+}
+.react-datepicker-popper {
+    z-index: 100; 
+    
+}
+.react-datepicker__header {
+    padding-top: 16px;
+    padding-bottom: 0px;
+    height: 50px;
+    border-top: 0px;
+    border-bottom: none;
+    /* border-radius: 28px; */
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.react-datepicker__header:not(.react-datepicker__header--has-time-select) {
+    border-top-right-radius: 28px;
+}
+.react-datepicker__navigation {
+    padding-top: 15px;
+    margin-left: 23px;
+    margin-right: 23px;
+}
+.calendar-controls {
+    position: relative;
+    top: -5px;
+    width: 256px;
+    padding: 8px 12px 12px 12px;
+    display: flex;
+    margin: 0;
+    justify-content: end;
+    background: #FFF;
+    border: 1px solid #aeaeae;
+    border-top: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.calendar-btn{
+    background: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    color: var(--bg-accentFill, #255328);
+    text-align: center;
+    font-family: "Helvetica Neue", helvetica, arial, sans-serif;
+    font-size: 0.9rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: var(--Label-Large-Line-Height, 20px); 
+    letter-spacing: var(--Label-Large-Tracking, 0.1px);
+}
+.calendar-btn-right-margin{
+    margin-right: 15px;
+}
+.progress-bar {
+    margin-top: 16px;
+    display: flex;
+    height: 4px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: var(--bg-lightBlue-2, #393A46);
+}
+.progress-bar-fill {
+    height: 4px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--accentOutlune, #9AE473);
+}
+.page-number {
+    margin-top: 8px;
+    color: var(--white, #FFF);
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+    letter-spacing: -0.36px;
+}
+.total-page-number{
+    opacity: 0.5;
+}
+.date-picker-input {
+    width: 100%;
+    padding: 14px 0px 14px 16px;
+    margin-top: 5px;
+    border: 2px solid #393A46;
+    background-color: #22222A;
+    border-radius: 9px;
+    outline: none;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%; 
+}
+.date-picker-input:focus {
+    border: 2px solid #fff;
+}
+.date-picker-group {
+    margin-top: 28px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 4px 0px 0px 0px;
+    align-items: flex-start;
+    
+    align-self: stretch;
+}
+.date-picker-wrapper {
+    position: relative;
+    width: calc(100% - 16px);
+}
+.react-datepicker-wrapper {
+    width: 100%;
+}
+.date-picker-label {
+    position: absolute;
+    top: -6px;  
+    left: 14px;
+    background-color: #22222A;  
+    padding: 0 4px; 
+    z-index: 1; 
+}
+.date-picker-span-text {
+    color: var(--white, #FFF);
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; 
+    letter-spacing: -0.36px;
+    opacity: 0.8;
+    
+}
+.add-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--XS, 8px);
+    background-color: #22222A;
+    padding: 0;
+    margin: 32px 0px 0px 0px;
+}
+.add-img-container {
+    display: flex;
+    width: 12px;
+    height: 12px;
+    padding: 12.754px;
+    justify-content: center;
+    align-items: center;
+    gap: 5.797px;
+    border-radius: 40px;
+    background: var(--bg-lightBlue-2, #393A46);
+}
+.add-btn-text {
+    color: var(--white, #FFF);
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; 
+    letter-spacing: -0.36px;
+}
+.time-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.time-input-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+.time-input-section {
+    display: flex;
+    width: 96px;
+    height: 80px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    color: var(--white, #FFF);
+    text-align: center;
+    font-family: "Ford Antenna";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+    background: #393A46;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+.time-label {
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%; 
+}
+.time-label-text{
+    margin-bottom: 8px;
+}
+.time-separator {
+    display: flex;
+    width: 24px;
+    height: 80px;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--bg-lightBlue, #2E2E38);
+    text-align: center;
+    font-family: Roboto;
+    font-size: 57px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 64px; 
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.form-details-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.form-details-title {
+    margin: 58px 0px 16px 0px;
+    align-self: stretch;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+}
+.details-price-container {
+    color: var(--white, #FFF);
+    /* H1 */
+    font-family: "Ford Antenna";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 36px */
+}
+.request-info{
+    display: flex;
+    padding: var(--S, 16px);
+    margin: 32px 0px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: var(--bg-lightBlue, #2E2E38);
+    color: #FFF;
+    font-family: "SF Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; 
+    letter-spacing: -0.42px;
+}
+.preview-btn {
+    display: flex;
+    width: 100%;
+    height: 48px;
+    padding: 15px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: #FFF;
+    color: var(--bg-darkBlue, #22222A);
+    text-align: center;
+    font-family: "SF Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%; 
+    letter-spacing: -0.48px;
+    margin-bottom: 64px;
+}
+.preview-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.modal-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.modal-content {
+    position: fixed;
+    top: 0px;
+    background: #22222A;
+    border-radius: 8px;
+    /* margin-left: 8px; */
+    width:100%;
+    height: 100%;
+     
+    overflow-y: hidden; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-out;
+    z-index: 9999;
+}
+
+.modal-title {
+    color: #FFF;
+    font-family: "Ford Antenna";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%; 
+    margin-bottom: 32px;
+    margin-left: 16px;
+    margin-top: 16px;
+}
+.row-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: #FFF;
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 13.8px */
+    letter-spacing: -0.36px;
+}
+.row-content span {
+    opacity: 0.8;
+}
+.row-content p {
+    margin: 0;
+    text-align: end;
+}
+.modal-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin: 16px;
+    margin-bottom: 32px;
+}
+.modal-close {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555;
+    padding: 0;
+    height: 20px;
+}
+.modal-details-title {
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%; 
+}
+
+.modal-close:hover {
+    color: #000;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+}
+}
+.delete-message-container{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: absolute;
+    padding: 64px 24px 24px 24px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    color: white;
+    text-align: center;
+    border-radius: 24px;
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.5);
+    animation: slide-up 0.5s ease-out;
+    overflow: hidden; 
+    z-index: 22;
+}
+.delete-message{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+.delete-message-title{
+    color: #FFF;
+    text-align: center;
+    font-family: "Ford Antenna";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+    margin: 0;
+}
+.delete-message-description{
+    color: #FFF;
+    text-align: center;
+    font-family: "SF Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; 
+    letter-spacing: -0.42px;
+    margin: 0;
+    width: 232px;
+}
+.delete-btn-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+}
+.delete-btn-back{
+    display: flex;
+    height: 46px;
+    padding: 15px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    background: var(--bg-darkBlue, #22222A);
+    color: var(--white, #FFF);
+    text-align: center;
+    /* buttonSmall */
+    font-family: "SF Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%; /* 16.1px */
+    letter-spacing: -0.42px;
+}
+.delete-btn-accept{
+    display: flex;
+    height: 48px;
+    padding: 15px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    background: #FFF;
+    color: var(--bg-darkBlue, #22222A);
+    text-align: center;
+    font-family: "SF Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%; /* 18.4px */
+    letter-spacing: -0.48px;
+}
+.footer-btn-delete {
+    display: flex;
+    width: 50%;
+    height: 48px;
+    padding: 15px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    background: none;
+    color: var(--error, #E53935);
+    text-align: center;
+    font-family: "SF Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%; 
+    letter-spacing: -0.42px;
+}
+.footer-btn-confirm {
+    display: flex;
+    width: 50%;
+    height: 48px;
+    padding: 15px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1 0 0;
+    border-radius: 8px;
+    background: var(--bg-accentFill, #255328);
+    color: var(--white, #FFF);
+    text-align: center;
+    font-family: "SF Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%; 
+    letter-spacing: -0.48px;
+}
+
+.request-car-page {
+    height: 100vh;
+}
+
+.form-content-wrapper-date {
+    height: 100vh;
+}
+.checkbox-wrapper {
+    margin-top: 16px;
+    display: flex;
+    gap: 8px;
+    align-items:center;
+}
+.checkbox-date {
+    appearance: none; 
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff; 
+    border-radius: 4px; 
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin: 0;
+  }
+  
+  .checkbox-date:checked {
+    background-color: transparent; 
+  }
+  
+  .checkbox-date:checked::after {
+    content: '✔'; 
+    font-size: 16px;
+    color: #fff; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+  }
+  .checkbox-date-text{
+    color: var(--white, #FFF);
+    font-family: "SF Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; 
+    letter-spacing: -0.36px;
+  }

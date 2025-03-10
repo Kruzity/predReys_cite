@@ -1,0 +1,118 @@
+.vehicle-details-container {
+    display: flex;
+    flex-direction: column;
+    
+}
+.vehicle-details-section{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin: 0px 16px;
+}
+.vehicle-details-title {
+    align-self: stretch;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+    margin: 100px 0px 0px 0px;
+}
+.vehicle-details-maininfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    height: auto;
+    color: #FFF;
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 13.8px */
+    letter-spacing: -0.36px;
+    opacity: 0.8;
+    white-space: normal; /* Позволяет тексту переноситься */
+    word-wrap: break-word; /* Переносит длинные слова */
+    overflow-wrap: break-word;
+}
+.row span {
+    flex: 1; 
+    text-align: left; 
+} 
+.row p {
+    flex: 1; 
+    text-align: right; 
+}
+.trailer-title{
+    margin: 0;
+    margin-bottom: 8px;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%; 
+}
+.vehicle-details-trailerinfo-description{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.vehicle-owner-card{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 14px;
+    color: #FFF;
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; 
+    letter-spacing: -0.36px;
+    opacity: 0.8;
+}
+.vehicle-details-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: var(--S, 6px);
+    align-self: stretch;
+    padding: 0;
+    margin: 0;
+}
+.adress-send-title{
+    margin: 0px 0px 10px 0px;
+    color: var(--white, #FFF);
+    /* textMedium */
+    font-family: "Ford Antenna";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%; /* 16.1px */
+}
+.vehicle-details-list li{
+    display: flex;
+    padding: var(--S, 16px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: var(--bg-lightBlue, #2E2E38);
+    color: #FFF;
+    /* textSmall */
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 13.8px */
+    letter-spacing: -0.36px;
+}

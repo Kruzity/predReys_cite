@@ -1,0 +1,95 @@
+
+.org-details-title{
+    margin-left: 16px;
+}
+.org-details-title h1{
+    margin: 80px 0px 16px 0px;
+    align-self: stretch;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+}
+.org-details-title p{
+    margin: 0px 0px 4px 0px;
+    color: var(--white, #FFF);
+    height: 14px;
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 13.8px */
+    letter-spacing: -0.36px;
+    opacity: 0.6;
+}
+
+.org-details-title p span{
+    width: 80px;
+    display: inline-block;
+}
+.org-details-button-section{
+    margin: 32px 16px 0px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-between;
+    
+}
+.my-autopark-btn,
+.my-drivers-btn,
+.sendout-btn,
+.apply-btn {
+    display: flex;
+    width: calc(50% - 4px);
+    height: 170px;
+    padding: var(--S, 16px);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 20px;
+    background: var(--bg-lightBlue, #2E2E38);
+    box-sizing: border-box;
+}
+.delivery-btn {
+    display: flex;
+    height: 130px;
+    width: 100%;
+    padding: var(--S, 16px);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 20px;
+    background: var(--bg-lightBlue, #2E2E38);
+}
+
+.my-autopark-btn:hover,
+.my-drivers-btn:hover,
+.sendout-btn:hover,
+.apply-btn:hover,
+.delivery-btn:hover {
+    background: #255328;
+}
+.my-autopark-btn:hover .image-container,
+.my-drivers-btn:hover .image-container,
+.sendout-btn:hover .image-container,
+.apply-btn:hover .image-container,
+.delivery-btn:hover .image-container {
+    background: #fff;
+}
+.my-autopark-btn:hover .icon-container .icon,
+.my-drivers-btn:hover .icon-container .icon,
+.sendout-btn:hover .icon-container .icon,
+.apply-btn:hover .icon-container .icon,
+.delivery-btn:hover .icon-container .icon {
+    stroke: #fff;
+}
+.my-autopark-btn:hover .image-container .arrow,
+.my-drivers-btn:hover .image-container .arrow,
+.sendout-btn:hover .image-container .arrow,
+.apply-btn:hover .image-container .arrow,
+.delivery-btn:hover .image-container .arrow {
+    fill: #255328;
+}

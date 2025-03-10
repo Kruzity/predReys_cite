@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Ford Antenna';
+  src: url('/fonts/ford-antenna-medium.otf') format('opentype');
+}
+@font-face {
+font-family: 'SF Pro';
+src: url('/fonts/SFPROREGULAR.OTF') format('opentype');
+}
+body{
+  margin: 0 auto;
+  width: 100%;
+  background: #22222A; 
+}
+#root {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+button {
+  border-style: none;
+  cursor: pointer;
+}
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.loader-page-spinner {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 100vh;
+}

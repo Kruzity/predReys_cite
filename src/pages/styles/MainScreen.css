@@ -1,0 +1,126 @@
+.main-logo{
+    margin-bottom: 100px;
+}
+.main-description{
+    display: flex;
+    width: 288px;
+    height: 120px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 32px;
+    
+}
+.main-description h1{
+    margin: 0;
+    align-self: stretch;
+    color: #FFF;
+    font-family: "Ford Antenna";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; 
+}
+.main-description p{
+    width: 183px;
+    height: 32px;
+    color:#FFF;
+    font-family: "SF Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+    letter-spacing: -0.42px;
+    opacity: 0.8;
+    margin: 0;
+}
+
+.main-screen-btn-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0px 16px;
+    height: 400px;
+    
+}
+.btn-header{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.image-container{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    background: #393A46;
+}
+.btn-footer-text{
+    align-self: stretch;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%; /* 16.1px */
+    text-align: start;
+}
+.my-organisations-btn, 
+.my-orders-btn {
+    width: 50%;
+    height: 200px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 20px;
+    background: var(--bg-lightBlue, #2E2E38);
+}
+
+.form-orders-btn{
+    width: 100%;
+    height: 180px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-radius: 20px;
+    background: var(--bg-lightBlue, #2E2E38);
+}
+
+.my-organisations-btn,
+.my-orders-btn {
+    flex: 1 1 calc(50% - 4px); /* Каждая из первых двух кнопок занимает половину ширины с учетом gap */
+}
+
+.form-orders-btn {
+    flex: 1 1 100%; /* Третья кнопка занимает всю ширину */
+}
+.my-organisations-btn:hover, 
+.my-orders-btn:hover, 
+.form-orders-btn:hover {
+    background: #255328;
+}
+.my-organisations-btn:hover .image-container, 
+.my-orders-btn:hover .image-container, 
+.form-orders-btn:hover .image-container {
+    background: #fff;
+}
+.my-organisations-btn:hover .icon-container .icon,
+.my-orders-btn:hover .icon-container .icon,
+.form-orders-btn:hover .icon-container .icon {
+    stroke: #fff;
+}
+.my-organisations-btn:hover .image-container .arrow,
+.my-orders-btn:hover .image-container .arrow,
+.form-orders-btn:hover .image-container .arrow {
+    
+    fill: #255328;
+}

@@ -1,0 +1,100 @@
+.my-drivers-title-section {
+    display: flex;
+    width: 288px;
+    margin: 100px 0px 32px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--S, 16px);
+}
+.my-drivers-title {
+    margin: 0;
+    align-self: stretch;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+.my-drivers-title-description {
+    width: 183px;
+    color: var(--white, #FFF);
+    font-family: "SF Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+    letter-spacing: -0.42px;
+    opacity: 0.8;
+    margin: 0;
+}
+.my-drivers-list {
+    align-items: center;
+    padding: 0;
+    margin: 0px 16px;
+}
+.my-drivers-list li {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 8px;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-lightBlue, #2E2E38);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.driver-card-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 16px 0px 16px 16px;
+    width: 100%;
+}
+
+.driver-name {
+    margin: 0px 0px 16px 0px;
+    width: 240px;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%;
+}
+.driver-icon {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: var(--S, 8px);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 80px;
+    background: var(--bg-darkBlue, #22222A);
+}
+.my-drivers-info-container{
+    width: 204px;
+}
+.my-drivers-info-container p {
+    margin: 0px 0px 4px 0px;
+    color: var(--white, #FFF);
+    height: 14px;
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+    letter-spacing: -0.2px;
+    opacity: 0.6;
+}
+.my-drivers-info-container p span {
+    width: 80px;
+    display: inline-block;
+}
+.my-drivers-action-icon {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-right: 16px;
+}
