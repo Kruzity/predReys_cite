@@ -16,6 +16,7 @@ const formatTimezoneOffset = () => {
 
 const formatDate = (date, isLocal) => {
   const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  console.log(date, isLocal,timeZone)
   const parsedDate = DateTime.fromFormat(date, "dd.MM.yyyy", { zone: timeZone });
   return (isLocal ? parsedDate.toUTC().toISO() : parsedDate.toISO())
 }

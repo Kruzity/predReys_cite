@@ -1,5 +1,5 @@
-import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { HashRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Loader from './pages/Loader';
 import MainScreen from './pages/MainScreen';
 import MyOrganizations from './pages/MyOrganizations';
@@ -27,12 +27,28 @@ const queryClient = new QueryClient({
   }
 })
 
+function RedirectInvalidRoutes() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    //console.log(location.pathname)
+    if (location.pathname.includes("tgWebAppData")) {
+      navigate("/", { replace: true });
+    }
+  }, [location, navigate]);
+
+  return null;
+}
+
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <Router>
+        <RedirectInvalidRoutes />
         <Routes>
           <Route path="/" element={<Loader />} />
+          <Route path="/tgWebAppData" element={<Loader />} />
           <Route path="/main" element={<MainScreen />} />
           <Route path="/organizations" element={<MyOrganizations />} />
           <Route path="/organization/:id" element={<OrganizationDetails />} />
@@ -44,8 +60,8 @@ const App = () => {
           <Route path="/organization/:id/request-form" element={<RequestForm />} />
           <Route path="/organization/:id/deliveries" element={<DeliveryForm />} />
           <Route path="/orders" element={<MyOrders />} />
-          <Route path="/orders/:orderId" element={<OrderDetails />} /> 
-          <Route path="/orders/:orderId/requests/:requestId" element={<RequestDetails />} /> 
+          <Route path="/orders/:orderId" element={<OrderDetails />} />
+          <Route path="/orders/:orderId/requests/:requestId" element={<RequestDetails />} />
         </Routes>
       </Router>
     </QueryClientProvider>

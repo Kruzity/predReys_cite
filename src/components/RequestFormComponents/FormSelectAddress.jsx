@@ -10,6 +10,7 @@ const FormSelectAddress = ({ companyId, handleNext }) => {
   const [selectedAddress, setSelectedAddress] = useState(null);
   const [pinnedAddress, setPinnedAddress] = useState(() => {
     let pinnedAddress = localStorage.getItem("pinnedAddress");
+    setSelectedAddress(pinnedAddress)
     return pinnedAddress;
   });
 

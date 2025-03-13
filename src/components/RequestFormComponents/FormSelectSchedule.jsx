@@ -21,10 +21,12 @@ const FormSelectSchedule = ({ handleNext }) => {
     }
 
     let dates = [];
-    let currentDate = new Date(new Date(period.startDate).toLocaleDateString());
-    console.log(period.startDate, period.endDate)
+    let currentDate = new Date(period.startDate);
+    currentDate.setHours(0, 0, 0, 0)
+    console.log("per s, per e", period.startDate, period.endDate)
+    console.log("cur", currentDate)
     while (currentDate <= period.endDate) {
-      dates.push({ date: currentDate.toLocaleDateString("ru-RU") });
+      dates.push(currentDate.toLocaleDateString("ru-RU"));
       currentDate.setDate(currentDate.getDate() + 1);
     }
     console.log(dates)

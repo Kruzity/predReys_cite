@@ -18,7 +18,7 @@ const MyOrders = () => {
   }
 
   const ordersMap = wayBills.reduce((acc, bill) => {
-    const key = bill.track || "Ожидает обработки";
+    const key = bill.track || "ожидает обработки";
     if (!acc[key]) acc[key] = [];
     acc[key].push(bill);
     return acc;
@@ -41,7 +41,7 @@ const MyOrders = () => {
       <NavigateHeader onBack={handleBack} />
       <div className="my-orders-title-section">
         <h1 className="my-orders-title">
-          {selectedEntry ? `Заказ ${selectedEntry.track}` : "Мои заказы"}
+          {selectedEntry ? `Заявка ${selectedEntry.track}` : "Мои заявки"}
         </h1>
         <p className="my-orders-title-description">
           {selectedEntry ? "Заявки в выбранном заказе" : "Выберите заказ, чтобы узнать больше информации"}
@@ -83,8 +83,9 @@ const MyOrders = () => {
                 <h2>Заявка №{bill.numberRequest} - {bill.track || "Ожидает обработки"}</h2>
                 <div className="my-orders-text-section">
                   <p><span>Организация</span> <div className="org-width">{bill.wayBillContent.customerName}</div></p>
-                  <p><span>Заявки</span> {bill.quantity}</p>
-                  <p><span>Путевых листов</span> {bill.amount}</p>
+                  {/* <p><span>Заявки</span> {bill.quantity}</p> */}
+                  <p><span>Путевых листов</span> {bill.quantity}</p>
+                  <p><span>Даты</span> {new Date(bill.startDate.slice(0,10)).toLocaleDateString("ru-RU")} - {new Date(bill.endDate.slice(0,10)).toLocaleDateString("ru-RU")}</p>
                 </div>
               </div>
               <img className="org-action-icon" src={ListIcon} alt="Подробнее" />
