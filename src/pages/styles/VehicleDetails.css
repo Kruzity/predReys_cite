@@ -34,11 +34,11 @@
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 115%; /* 13.8px */
+    line-height: 115%; 
     letter-spacing: -0.36px;
     opacity: 0.8;
-    white-space: normal; /* Позволяет тексту переноситься */
-    word-wrap: break-word; /* Переносит длинные слова */
+    white-space: normal; 
+    word-wrap: break-word; 
     overflow-wrap: break-word;
 }
 .row span {

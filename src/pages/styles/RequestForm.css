@@ -53,11 +53,12 @@
 }
 .form-list-waybill {
     height: 100%;
+    padding-bottom: 80px;
 }
 .form-list-card{
     align-items: center;
     padding: 0;
-    height: 100vh;
+    padding-bottom: 80px;
 }
 .hover-form{
     display: flex;
@@ -102,10 +103,7 @@
     font-weight: 500;
     line-height: 115%; /* 16.1px */
 }
-.form-trailer-container {
-    height: 100vh;
-    overflow: auto;
-}
+
 .driver-name-null{
     margin: 0;
 }
@@ -130,12 +128,12 @@
 }
 .footer-single-btn-container{
     display: flex;
-    position: sticky;
-    width: calc(100% - 16px); 
+    position: fixed;
+    width: calc(100% - 32px); 
     background: #22222A;
     bottom: 0;
     padding: 8px;
-    padding-left: 8px;
+    padding-left: 0px;
     align-items: center;
 }
 .footer-single-btn[disabled] {
@@ -181,7 +179,7 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    width: calc(100% - 48px);
+    width: calc(100% - 32px);
     gap: 8px;
     margin-bottom: 4px;
 }
@@ -556,6 +554,7 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+    padding-bottom: 100px;
 }
 .time-input-wrapper {
     display: flex;

@@ -31,7 +31,7 @@ const MyOrders = () => {
     if (selectedEntry) {
       setSelectedEntry(null);
     } else {
-      navigate(-1);
+      navigate("/main");
     }
   };
 

@@ -60,8 +60,8 @@
     line-height: 115%; /* 13.8px */
     letter-spacing: -0.36px;
     opacity: 0.6;
-    white-space: normal; /* Позволяет тексту переноситься */
-    word-wrap: break-word; /* Переносит длинные слова */
+    white-space: normal; 
+    word-wrap: break-word; 
     overflow-wrap: break-word;
 }
 .my-orders-text-section span{

@@ -34,8 +34,7 @@ const VehicleDetails = () => {
           <>
             <div className="vehicle-details-maininfo">
               <div className="row"><span>Тип ТС</span><p>{vehicle.sts.vehicleType}</p></div>
-              <div className="row"><span>Марка</span><p>{vehicle.sts.brandModel}</p></div>
-              <div className="row"><span>Модель</span><p>{vehicle.sts.brandModel}</p></div>
+              <div className="row"><span>Марка, модель</span><p>{vehicle.sts.brandModel}</p></div>
               <div className="row"><span>Госномер</span><p>{vehicle.sts.registrationNumber}</p></div>
             </div>
             {/* {vehicle.trailer?.trailertype && (

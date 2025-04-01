@@ -10,7 +10,7 @@
     justify-content: space-between;
 }   
 .delivery-form-title-section{
-    margin: 100px 16px 0px 16px;
+    margin: 90px 16px 0px 16px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -20,7 +20,7 @@
     align-self: stretch;
     color: #FFF;
     font-family: "Ford Antenna";
-    font-size: 36px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 500;
     line-height: 100%; /* 36px */

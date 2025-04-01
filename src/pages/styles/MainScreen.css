@@ -97,11 +97,11 @@
 
 .my-organisations-btn,
 .my-orders-btn {
-    flex: 1 1 calc(50% - 4px); /* Каждая из первых двух кнопок занимает половину ширины с учетом gap */
+    flex: 1 1 calc(50% - 4px); 
 }
 
 .form-orders-btn {
-    flex: 1 1 100%; /* Третья кнопка занимает всю ширину */
+    flex: 1 1 100%; 
 }
 .my-organisations-btn:hover, 
 .my-orders-btn:hover, 

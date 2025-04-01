@@ -24,7 +24,7 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: 115%; /* 16.1px */
+    line-height: 115%; 
 }
 .flex-address-card{
     display: flex;
@@ -40,7 +40,7 @@
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 115%; /* 13.8px */
+    line-height: 115%; 
     letter-spacing: -0.36px;
 }
 .request-recipient-container {
@@ -54,7 +54,7 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
-    line-height: 115%; /* 16.1px */
+    line-height: 115%; 
 }
 .request-recipient-container {
     display: flex;
@@ -71,7 +71,7 @@
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
-    line-height: 115%; /* 13.8px */
+    line-height: 115%; 
     letter-spacing: -0.36px;
     opacity: 0.8;
 }

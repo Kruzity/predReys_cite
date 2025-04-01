@@ -34,6 +34,7 @@ function RedirectInvalidRoutes() {
   useEffect(() => {
     //console.log(location.pathname)
     if (location.pathname.includes("tgWebAppData")) {
+      console.log(location.pathname)
       navigate("/", { replace: true });
     }
   }, [location, navigate]);

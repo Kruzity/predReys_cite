@@ -22,8 +22,8 @@
 }
 .row {
     display: flex;
-    justify-content: space-between; /* Размещаем элементы строки по краям */
-    align-items: center; /* Выравнивание по вертикали */
+    justify-content: space-between; 
+    align-items: center; 
     height: 14px;
     color: #FFF;
     font-family: "SF Pro";
@@ -35,12 +35,12 @@
     opacity: 0.8;
 }
 .row span {
-    flex: 1; /* Устанавливаем ширину для span */
-    text-align: left; /* Текст выравнивается влево */
+    flex: 1; 
+    text-align: left; 
 }
 .row p {
-    flex: 1; /* Устанавливаем ширину для p */
-    text-align: right; /* Текст выравнивается вправо */
+    flex: 1; 
+    text-align: right; 
 }
 .license-title {
     margin: 0;
@@ -54,8 +54,8 @@
 }
 .driver-snils-card{
     display: flex;
-    justify-content: space-between; /* Размещаем элементы строки по краям */
-    align-items: center; /* Выравнивание по вертикали */
+    justify-content: space-between; 
+    align-items: center; 
     height: 14px;
     color: #FFF;
     font-family: "SF Pro";
