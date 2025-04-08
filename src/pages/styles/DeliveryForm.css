@@ -63,7 +63,7 @@
     width: 100%;
 }
 .form-delivery-input {
-    width: 100%;
+    width: calc(100% - 19px);
     margin: 0;
     padding: 14px 0px 14px 16px;
     margin-top: 5px;
@@ -77,6 +77,21 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     
+}
+.form-delivery-input-field {
+    width: 100%;
+    margin: 0;
+    padding: 14px 0px 14px 16px;
+    margin-top: 5px;
+    border: 2px solid #393A46;
+    background-color: #22222A;
+    border-radius: 9px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 .form-delivery-input:focus {
   outline: none;

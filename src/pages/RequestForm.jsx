@@ -28,8 +28,6 @@ import FormSelectTechnician from '../components/RequestFormComponents/FormSelect
 import FormOwnerPlatform from '../components/RequestFormComponents/FormOwnerPlatform';
 
 
-
-//Добавил для календарика, перевод дней и сортировка дней недели начиная с понедельника
 registerLocale("ru", ru);
 
 const exampleOfPOSTRequestWayBills = {

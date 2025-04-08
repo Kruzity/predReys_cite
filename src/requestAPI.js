@@ -10,6 +10,7 @@ let refresh_timeout = null;
 API.interceptors.request.use((config) => {
   if (!config._retry && access_token) {
     config.headers.Authorization = `Bearer ${access_token}`;
+    config.headers["Access-Control-Allow-Origin"] = "*";
   }
 
   console.log(config.url, config.params, access_token)

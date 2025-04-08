@@ -14,6 +14,8 @@ import MyOrders from "./pages/MyOrders/MyOrders";
 import OrderDetails from "./pages/MyOrders/OrderDetails";
 import RequestDetails from "./pages/MyOrders/RequestDetails";
 import DeliveryForm from './pages/DeliveryForm';
+import Accounting from './pages/Accounting/Accounting';
+import AccountReplenishment from './pages/Accounting/AccountReplenishment';
 import {
   QueryClient,
   QueryClientProvider
@@ -63,6 +65,8 @@ const App = () => {
           <Route path="/orders" element={<MyOrders />} />
           <Route path="/orders/:orderId" element={<OrderDetails />} />
           <Route path="/orders/:orderId/requests/:requestId" element={<RequestDetails />} />
+          <Route path="/organization/:id/accounting" element={<Accounting />} />
+          <Route path="/organization/:id/account-replenishment" element={<AccountReplenishment />} />
         </Routes>
       </Router>
     </QueryClientProvider>

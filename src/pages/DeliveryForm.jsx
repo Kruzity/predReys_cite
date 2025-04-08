@@ -151,61 +151,76 @@ const DeliveryForm = () => {
           <form className="delivery-form-form" onSubmit={handleSubmit}>
             <div className="form-content">
               <div className="input-container">
+                
                 <div className="input-wrapper">
                   <label className="delivery-form-label">
                     <span className="delivery-span-text">Адрес доставки</span>
                   </label>
-                  <select
+                  <input
                     className="form-delivery-input"
+                    type="text"
+                    list="delivery-addresses"
+                    placeholder="Введите или выберите адрес"
                     value={selectedAddress}
                     onChange={(e) => setSelectedAddress(e.target.value)}
-                  >
-                    <option value="" disabled>Выберите адрес доставки</option>
+                  />
+                  <datalist id="delivery-addresses">
                     {deliveryAddresses.map((address, index) => (
-                      <option key={index} value={address}>{address}</option>
+                      <option key={index} value={address} />
                     ))}
-                  </select>
+                  </datalist>
                 </div>
+
                 <div className="input-wrapper">
                   <label className="delivery-form-label">
                     <span className="delivery-span-text">Получатель</span>
                   </label>
-                  <select
+                  <input
                     className="form-delivery-input"
-                    value={selectedRecipientName}
-                    onChange={handleRecipientChange}
-                  >
-                    <option value="" disabled>Выберите получателя</option>
+                    type="text"
+                    list="recipient-list"
+                    placeholder="Введите или выберите получателя"
+                    value={selectedRecipient}
+                    onChange={(e) => {
+                      setSelectedRecipient(e.target.value);
+                      const recipient = recipients.find(r => r.description === e.target.value);
+                      setRecipientPhone(recipient ? recipient.phone : '');
+                    }}
+                  />
+                  <datalist id="recipient-list">
                     {recipients.map((recipient, index) => (
-                      <option key={index} value={recipient.id}>{recipient.description}</option>
+                      <option key={index} value={recipient.description} />
                     ))}
-                  </select>
+                  </datalist>
                 </div>
-                {recipientPhone && (
-                  <div className="input-wrapper-number">
-                    <label className="delivery-form-label">
-                      <span className="delivery-span-text">Телефон получателя</span>
-                    </label>
-                    <input
-                      className="form-delivery-input"
-                      type="text"
-                      value={recipientPhone}
-                      readOnly
-                    />
-                  </div>
-                )}
+
+                <div className="input-wrapper-number">
+                  <label className="delivery-form-label">
+                    <span className="delivery-span-text">Телефон получателя</span>
+                  </label>
+                  <input
+                    className="form-delivery-input-field"
+                    type="text"
+                    placeholder="Введите номер телефона"
+                    value={recipientPhone}
+                    onChange={(e) => setRecipientPhone(e.target.value)}
+                  />
+                </div>
+
               </div>
             </div>
+
             <div className="footer-delivery-btn-container">
               <button
                 className="footer-delivery-btn"
                 type="submit"
-                disabled={!selectedAddress || !selectedRecipient || isLoading}
+                disabled={!selectedAddress || !selectedRecipient || !recipientPhone || isLoading}
               >
                 Подтвердить
               </button>
             </div>
           </form>
+
           {showDeleteMessage && (
             <DeleteMessage onCustomAction={handleCustomBack}
               title="Заказ подтверждён"

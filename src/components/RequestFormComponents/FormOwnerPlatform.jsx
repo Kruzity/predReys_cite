@@ -34,7 +34,7 @@ const FormOwnerPlatform = ({ handleNext }) => {
                             <span className="delivery-span-text">Выбор владельца</span>
                         </label>
                         <select
-                            className="form-delivery-input"
+                            className="form-delivery-input-field"
                             value={selectedOwner ? selectedOwner.id : ""}
                             onChange={handelSelectOwner}
                         >

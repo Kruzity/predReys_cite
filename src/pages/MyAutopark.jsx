@@ -7,9 +7,15 @@ import { useQuery } from '@tanstack/react-query';
 import { API } from '../requestAPI';
 import { useCars } from '../hooks/useCars';
 import LoaderComponent from '../components/LoaderComponent';
+import AddButton from '../components/AddButton/AddButton';
+import AddVehicleModal from '../components/AddVehicleModal/AddVehicleModal';
+import { useState } from 'react';
+
 
 const MyAutopark = () => {
   const navigate = useNavigate();
+  const [showModal, setShowModal] = useState(false);
+  const [localVehicles, setLocalVehicles] = useState([]);
   // const { data, isPending, isError } = useQuery({
   //   queryKey: ["autopark"],
   //   queryFn: async () => {
@@ -36,6 +42,33 @@ const MyAutopark = () => {
 
   if (!data) return <div className='loader-page-spinner'><LoaderComponent /></div>
 
+ 
+
+
+  const handleAddVehicle = (vehicle) => {
+    console.log('Новое ТС:', vehicle);
+  
+    const fakeVehicle = {
+      sts: {
+        car: {
+          id: Date.now(), 
+          value: `${vehicle.brand} ${vehicle.model}`
+        },
+        registrationNumber: vehicle.number,
+        company: {
+          name: "Ваша компания", 
+          id: "local" 
+        }
+      }
+    };
+  
+    setLocalVehicles(prev => [...prev, fakeVehicle]);
+    setShowModal(false);
+  };
+  const allVehicles = [...data, ...localVehicles];
+
+  
+
   return (
     <div className="my-autopark-container">
       <NavigateHeader />
@@ -45,9 +78,19 @@ const MyAutopark = () => {
           Выберите ТС, чтобы узнать больше информации
         </p>
       </div>
+      <AddButton 
+        onClick={() => setShowModal(true)} 
+        AddText="Добавить ТС" 
+      />
+      <AddVehicleModal 
+        isOpen={showModal} 
+        onClose={() => setShowModal(false)} 
+        onSubmit={handleAddVehicle}
+      />
+
       {/* Отображаем транспортные средства */}
       <ul className="my-autopark-list-card">
-        {data.map((vehicle) => (
+        {allVehicles.map((vehicle) => (
           <li key={vehicle.sts.car.id} onClick={() => handleSelectVehicle(vehicle)}>
               <div className="list-card-container">
                 <div className="car-icon">
@@ -56,7 +99,7 @@ const MyAutopark = () => {
                 <div className="car-flex-container">
                 <div className="my-autopark-info-container">
                   <h2 className="list-card-title">
-                    {vehicle.sts.car.value}
+                    {vehicle.sts.car.value || "Название не указано"}
                   </h2>
                   <p>
                     <span>Гос. номер:</span> {vehicle.sts.registrationNumber}

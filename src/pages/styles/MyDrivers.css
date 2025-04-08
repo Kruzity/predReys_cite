@@ -1,7 +1,7 @@
 .my-drivers-title-section {
     display: flex;
     width: 288px;
-    margin: 100px 0px 32px 16px;
+    margin: 100px 0px 16px 16px;
     flex-direction: column;
     align-items: flex-start;
     gap: var(--S, 16px);
@@ -31,7 +31,7 @@
 .my-drivers-list {
     align-items: center;
     padding: 0;
-    margin: 0px 16px;
+    margin: 16px 16px 0px 16px;
 }
 .my-drivers-list li {
     display: flex;

@@ -121,9 +121,9 @@ const OrganizationDetails = () => {
           </div>
         </button>
 
-        {/* <button className='delivery-btn'
+        <button className='delivery-btn'
           onClick={() =>
-            navigate(`/organization/${organization.id}/deliveries`, { state: { organization } })
+            navigate(`/organization/${organization.id}/accounting`, { state: { organization } })
           }
         >
           <div className="btn-header">
@@ -143,9 +143,9 @@ const OrganizationDetails = () => {
             </div>
           </div>
           <div className="btn-footer-text">
-            СДЭК. Мои доставки
+            Бухгалтерия
           </div> 
-      </button>*/}
+      </button>
       </div>
     </div >
   );
