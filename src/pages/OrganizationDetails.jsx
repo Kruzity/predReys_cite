@@ -21,7 +21,7 @@ const OrganizationDetails = () => {
       <div className="org-details-button-section">
 
         <button className='my-autopark-btn'
-          onClick={() => navigate(`/organization/${organization.company.id}/autopark`)}
+          onClick={() => navigate(`/organization/${organization.company.id}/autopark`, { state: { companyId: organization.company.id } })}
         >
           <div className="btn-header">
             <div className="icon-container">
@@ -43,7 +43,7 @@ const OrganizationDetails = () => {
         </button>
 
         <button className='my-drivers-btn'
-          onClick={() => navigate(`/organization/${organization.company.id}/drivers`)}
+          onClick={() => navigate(`/organization/${organization.company.id}/drivers`, { state: { companyId: organization.company.id } })}
         >
           <div className="btn-header">
             <div className="icon-container">

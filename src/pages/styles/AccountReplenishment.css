@@ -1,0 +1,31 @@
+.top-up-form {
+    color: white;
+    margin: 32px 16px 16px 16px;
+}
+.tracking-section-flex-container{
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+    height: 100vh;
+}
+.tracking-number-box{
+    margin-top: 16px;
+    width: calc(100% - 28px);
+    display: flex;
+    padding: 16px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: var(--bg-lightBlue, #2E2E38);
+    cursor: pointer;
+    /* text */
+    color: #FFF;
+    font-family: "SF Pro";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 16.1px */
+    letter-spacing: -0.42px;
+}

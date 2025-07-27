@@ -20,12 +20,15 @@ const DriverDetails = () => {
           <h3 className="license-title">Водительское удостоверение</h3>
           <div className="driver-license-info-description">
             <div className="row"><span>Серия, номер</span><p>{driver.person.driverLicense?.series} {driver.person.driverLicense?.number}</p></div>
-            <div className="row"><span>Дата выдачи</span><p>{driver.person.driverLicense?.issuedAt ?? new Date(driver.person.driverLicense?.issuedAt.slice(0,10)).toLocaleDateString("ru-RU")}</p></div>
+            <div className="row"><span>Дата выдачи</span><p>{driver.person.driverLicense?.issuedAt ?? new Date(driver.person.driverLicense?.issuedAt.slice(0, 10)).toLocaleDateString("ru-RU")}</p></div>
             <div className="row"><span>Категории прав</span><p>{driver.person.driverLicense?.categories}</p></div>
           </div>
         </div>
         <div className="driver-snils-card">
           <span>СНИЛС</span><p>{driver.person.snils?.value}</p>
+        </div>
+        <div className="driver-snils-card">
+          <span>Паспорт</span><p>{driver.person.passport?.series} - {driver.person.passport?.number}</p>
         </div>
       </div>
     </div>

@@ -47,6 +47,7 @@ const Loader = () => {
           onClose={() => setShowError(false)}
           title="Ошибка доступа"
           description="Вы не обладаете правами для использования бота"
+          errorBtnText="Поддержка"
           />
       )}
     </div>

@@ -1,0 +1,83 @@
+.file-upload-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+.file-upload-btn {
+    display: flex;
+    width: 50%;
+    height: 48px;
+    padding: 15px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background: #FFF;
+    color: var(--bg-darkBlue, #22222A);
+    text-align: center;
+    font-family: "SF Pro";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%; /* 18.4px */
+    letter-spacing: -0.48px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+.add-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.add-modal {
+    background-color: #22222A;
+    color: white;
+    border: 2px solid #ffffff33;
+    border-radius: 12px;
+    padding: 30px 20px 0px 16px;
+    width: 100%;
+    max-width: 90vw;
+    max-height: 60vh;
+    min-height: 30%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);  
+    overflow-y: auto;
+}
+.add-modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.add-modal-content {
+    position: relative;
+}
+.add-adress-modal-buttons {
+    display: flex;
+    margin: 16px 0px;
+}
+.input-wrapper-address {
+    position: relative;
+    width: calc(100% + 3px);
+}
+.input-with-suggestions {
+    position: relative;
+    width: 100%;
+}
+.input-with-suggestions input {
+    width: calc(100% - 56px);
+    padding-right: 30px;
+}
+
+.add-user-icon-inside:hover {
+    opacity: 1;
+}
+.input-wrapper-gender {
+    position: relative;
+    width: calc(100% + 4px);
+}

@@ -32,3 +32,16 @@ ul{
   align-items:center;
   height: 100vh;
 }
+input::-webkit-calendar-picker-indicator {
+  margin-right: 6px;
+  color: white;
+  -webkit-appearance: none;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+

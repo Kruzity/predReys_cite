@@ -4,8 +4,8 @@ import { API } from '../requestAPI';
 import { useState } from 'react';
 
 import NavigateHeader from '../components/NavigateHeader/NavigateHeader';
-import DriverIcon from "../assets/icons/ButtonIcons/driver-icon.svg"; 
-import ArrowIcon from "../assets/icons/ButtonIcons/list-icon-arrow.svg"; 
+import DriverIcon from "../assets/icons/ButtonIcons/driver-icon.svg";
+import ArrowIcon from "../assets/icons/ButtonIcons/list-icon-arrow.svg";
 import "./styles/MyDrivers.css";
 import LoaderComponent from '../components/LoaderComponent';
 import AddButton from '../components/AddButton/AddButton';
@@ -13,6 +13,8 @@ import AddDriverModal from '../components/AddDriverModal/AddDriverModal';
 
 const MyDrivers = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const { companyId } = location.state;
 
   const { data, isError, isPending } = useQuery({
     queryKey: ["drivers"],
@@ -61,14 +63,15 @@ const MyDrivers = () => {
           Выберите водителя, чтобы узнать больше информации
         </p>
       </div>
-      <AddButton 
-        onClick={() => setShowModal(true)} 
-        AddText="Добавить водителя" 
+      <AddButton
+        onClick={() => setShowModal(true)}
+        AddText="Добавить водителя"
       />
-      <AddDriverModal 
+      <AddDriverModal
         isOpen={showModal}
         onClose={() => setShowModal(false)}
         onSubmit={handleAddDriver}
+        companyId={companyId}
       />
       <ul className="my-drivers-list">
         {allDrivers.map((driver) => (

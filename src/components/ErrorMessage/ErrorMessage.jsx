@@ -7,7 +7,7 @@ import loaderImageEllipse2 from '../../assets/icons/errorMessageAnimation/loader
 import loaderImageEllipse1 from '../../assets/icons/errorMessageAnimation/loader-image-ellipse-1.svg';
 import loaderImageKnob from '../../assets/icons/errorMessageAnimation/loader-image-knob.svg';
 
-const ErrorMessage = ({ onClose, title, description }) => {
+const ErrorMessage = ({ onClose, title, description, errorBtnText }) => {
   //Реализовать функционал кнопки
   return (
     <div className="error-message-container">
@@ -37,7 +37,7 @@ const ErrorMessage = ({ onClose, title, description }) => {
       </div>
       <div className="error-support-button">
         <button className="error-support-btn" onClick={onClose}>
-          Поддержка
+          {errorBtnText}
         </button>
       </div>
     </div>

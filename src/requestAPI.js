@@ -1,4 +1,5 @@
 import axios from 'axios';
+import config from "../config/env.js";
 
 // Конфигурация API клиента
 const API = axios.create();
@@ -13,7 +14,7 @@ API.interceptors.request.use((config) => {
     config.headers["Access-Control-Allow-Origin"] = "*";
   }
 
-  console.log(config.url, config.params, access_token)
+  console.log(config.url, config.params)
 
   return config;
 });
@@ -29,7 +30,7 @@ API.interceptors.response.use(
 
     if (error.status === 401) {
       if (refresh_token) {
-        let response = (await API.post("https://stageauth.predreysdoc.com/api/v1/Authorization/Refresh", {
+        let response = (await API.post(`${config.AuthApiUri}api/v1/Authorization/Refresh`, {
           "refreshToken": refresh_token
         })).data
 
@@ -41,7 +42,7 @@ API.interceptors.response.use(
         API(originalRequest)
       }
       else {
-        const response = (await API.post('https://stageauth.predreysdoc.com/api/v1/Authorization/Signin', { userId: "info@feniks.ru", password: "12345678" })).data;
+        const response = (await API.post(`${config.AuthApiUri}api/v1/Authorization/Signin`, { userId: "info@feniks.ru", password: "12345678" })).data;
         setAccessToken(response);
 
         originalRequest.headers.Authorization = `Bearer ${response.token}`

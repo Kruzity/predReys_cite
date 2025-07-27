@@ -1,0 +1,68 @@
+.driver-add-contact-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--XS, 8px);
+    background-color: #22222A;
+    padding: 0;
+    height: 48px;
+    margin-top: 8px;
+}
+.add-driver-img-container {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    padding: 12.754px;
+    justify-content: center;
+    align-items: center;
+    gap: 5.797px;
+    border-radius: 40px;
+    background: var(--bg-lightBlue-2, #393A46);
+}
+.second-modal-title{
+    margin: 16px 0px;
+    margin-left: 16px;
+    width: 280px;
+    color: var(--white, #FFF);
+    font-family: "Ford Antenna";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 115%; /* 16.1px */
+}
+.form-delivery-input-field.hide-custom-input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.suggestions-list {
+    position: absolute;
+    background: #2E2E38;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 10;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 8px;
+}
+.suggestions-list li {
+    padding: 8px;
+    cursor: pointer;
+}
+.suggestions-list li:hover {
+    background-color: #31313b;
+}
+.add-user-icon-inside {
+    position: absolute;
+    right: -10px;
+    top: 53%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}

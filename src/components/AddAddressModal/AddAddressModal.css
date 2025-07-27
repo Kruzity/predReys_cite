@@ -1,0 +1,41 @@
+.add-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.add-modal {
+    background-color: #22222A;
+    color: white;
+    border: 2px solid #ffffff33;
+    border-radius: 12px;
+    padding: 30px 20px 0px 16px;
+    width: 100%;
+    max-width: 90vw;
+    max-height: 60vh;
+    min-height: 30%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);  
+    overflow-y: auto;
+}
+.add-modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.add-modal-content {
+    position: relative;
+}
+.add-adress-modal-buttons {
+    display: flex;
+    margin: 16px 0px;
+}
+.input-wrapper-address {
+    position: relative;
+    width: calc(100% + 3px);
+}

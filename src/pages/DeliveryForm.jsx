@@ -6,20 +6,8 @@ import LoaderComponent from '../components/LoaderComponent';
 import NavigateHeader from '../components/NavigateHeader/NavigateHeader';
 import DeleteMessage from '../components/DeleteMessage/DeleteMessage';
 import './styles/DeliveryForm.css';
-import { DateTime } from "luxon"
 import { API } from '../requestAPI';
-
-const formatTimezoneOffset = () => {
-  let offset = Math.abs(new Date().getTimezoneOffset());
-  return `${String(offset / 60 | 0).padStart(2, '0')}:${String(offset % 60).padStart(2, '0')}:00`;
-};
-
-const formatDate = (date, isLocal) => {
-  const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  console.log(date, isLocal,timeZone)
-  const parsedDate = DateTime.fromFormat(date, "dd.MM.yyyy", { zone: timeZone });
-  return (isLocal ? parsedDate.toUTC().toISO() : parsedDate.toISO())
-}
+import { formatDate, formatTimezoneOffset } from '../utils';
 
 const travelForms = [
   "Т3 (легковые до 3,5 т)",
@@ -74,8 +62,8 @@ const DeliveryForm = () => {
           Recipient: selectedRecipientName,
           RecipientContactPhone: recipientPhone,
           RecipientId: selectedRecipient.id,
-          StartDate: formatDate(wb.startDate, true),
-          StartDateDt: formatDate(wb.startDate, false),
+          StartDate: formatDate(wb.startDate, "dd.MM.yyyy", true),
+          StartDateDt: formatDate(wb.startDate, "dd.MM.yyyy", false),
           TenantId: wb.companyData.tenantId,
           TransportationTypes: wb.transportationTypes,
           TypesOfTransportService: wb.typesOfTransportService,
@@ -151,7 +139,7 @@ const DeliveryForm = () => {
           <form className="delivery-form-form" onSubmit={handleSubmit}>
             <div className="form-content">
               <div className="input-container">
-                
+
                 <div className="input-wrapper">
                   <label className="delivery-form-label">
                     <span className="delivery-span-text">Адрес доставки</span>

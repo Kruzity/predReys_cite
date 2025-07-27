@@ -1,0 +1,29 @@
+.delivery-add-contact-btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--XS, 8px);
+    background-color: #22222A;
+    padding: 0;
+    margin: 0px 0px 0px 16px;
+}
+.add-contact-img-container{
+    display: flex;
+    width: 12px;
+    height: 12px;
+    padding: 12.754px;
+    justify-content: center;
+    align-items: center;
+    gap: 5.797px;
+    border-radius: 40px;
+    background: var(--bg-lightBlue-2, #393A46);
+}
+.add-contact-btn-text{
+    color: var(--white, #FFF);
+    font-family: "SF Pro";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%; /* 13.8px */
+    letter-spacing: -0.36px;
+}

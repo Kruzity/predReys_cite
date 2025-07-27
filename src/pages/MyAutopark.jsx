@@ -13,6 +13,9 @@ import { useState } from 'react';
 
 
 const MyAutopark = () => {
+  const location = useLocation();
+  const { companyId } = location.state;
+
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   const [localVehicles, setLocalVehicles] = useState([]);
@@ -45,26 +48,26 @@ const MyAutopark = () => {
  
 
 
-  const handleAddVehicle = (vehicle) => {
-    console.log('Новое ТС:', vehicle);
+  // const handleAddVehicle = (vehicle) => {
+  //   console.log('Новое ТС:', vehicle);
   
-    const fakeVehicle = {
-      sts: {
-        car: {
-          id: Date.now(), 
-          value: `${vehicle.brand} ${vehicle.model}`
-        },
-        registrationNumber: vehicle.number,
-        company: {
-          name: "Ваша компания", 
-          id: "local" 
-        }
-      }
-    };
+  //   const fakeVehicle = {
+  //     sts: {
+  //       car: {
+  //         id: Date.now(), 
+  //         value: `${vehicle.brand} ${vehicle.model}`
+  //       },
+  //       registrationNumber: vehicle.number,
+  //       company: {
+  //         name: "Ваша компания", 
+  //         id: "local" 
+  //       }
+  //     }
+  //   };
   
-    setLocalVehicles(prev => [...prev, fakeVehicle]);
-    setShowModal(false);
-  };
+  //   setLocalVehicles(prev => [...prev, fakeVehicle]);
+  //   setShowModal(false);
+  // };
   const allVehicles = [...data, ...localVehicles];
 
   
@@ -85,7 +88,8 @@ const MyAutopark = () => {
       <AddVehicleModal 
         isOpen={showModal} 
         onClose={() => setShowModal(false)} 
-        onSubmit={handleAddVehicle}
+        //onSubmit={handleAddVehicle}
+        companyId={companyId}
       />
 
       {/* Отображаем транспортные средства */}
