@@ -85,7 +85,7 @@ const MyOrders = () => {
                   <p><span>Организация</span> <div className="org-width">{bill.wayBillContent.customerName}</div></p>
                   {/* <p><span>Заявки</span> {bill.quantity}</p> */}
                   <p><span>Путевых листов</span> {bill.quantity}</p>
-                  <p><span>Даты</span> {new Date(bill.startDate.slice(0,10)).toLocaleDateString("ru-RU")} - {new Date(bill.endDate.slice(0,10)).toLocaleDateString("ru-RU")}</p>
+                  <p><span>Даты</span> {new Date(bill.startDate?.slice(0,10)).toLocaleDateString("ru-RU")} - {new Date(bill.endDate?.slice(0,10)).toLocaleDateString("ru-RU")}</p>
                 </div>
               </div>
               <img className="org-action-icon" src={ListIcon} alt="Подробнее" />

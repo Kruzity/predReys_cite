@@ -1,15 +1,14 @@
 import axios from 'axios';
-import config from "../config/env.js";
+import config from "./config/env.js";
 
 // Конфигурация API клиента
 const API = axios.create();
 
-let access_token = null;
-let refresh_token = null;
-let refresh_timeout = null;
-
 API.interceptors.request.use((config) => {
+  let access_token = localStorage.getItem('access_token')
+  
   if (!config._retry && access_token) {
+
     config.headers.Authorization = `Bearer ${access_token}`;
     config.headers["Access-Control-Allow-Origin"] = "*";
   }
@@ -29,6 +28,8 @@ API.interceptors.response.use(
     let originalRequest = error.config;
 
     if (error.status === 401) {
+      let refresh_token = localStorage.getItem("refresh_token")
+
       if (refresh_token) {
         let response = (await API.post(`${config.AuthApiUri}api/v1/Authorization/Refresh`, {
           "refreshToken": refresh_token
@@ -41,25 +42,14 @@ API.interceptors.response.use(
 
         API(originalRequest)
       }
-      else {
-        const response = (await API.post(`${config.AuthApiUri}api/v1/Authorization/Signin`, { userId: "info@feniks.ru", password: "12345678" })).data;
-        setAccessToken(response);
-
-        originalRequest.headers.Authorization = `Bearer ${response.token}`
-        originalRequest._retry = true;
-
-        API(originalRequest)
-      }
     }
   }
 )
 
 // Устанавливаем новый access_token
-const setAccessToken = ({ token, expiresIn, refreshToken }) => {
-
-  access_token = token;
-  refresh_token = refreshToken;
-  //scheduleTokenRefresh(expiresIn);
+const setAccessToken = ({ token, refreshToken }) => {
+  localStorage.setItem('access_token', token);
+  localStorage.setItem('refresh_token', refreshToken);
 };
 
 const clearAccessToken = () => {

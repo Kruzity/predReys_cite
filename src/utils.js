@@ -1,7 +1,4 @@
 import { DateTime } from "luxon";
-import dotenv from "dotenv";
-
-dotenv.config()
 
 export const formatTimezoneOffset = () => {
   let offset = Math.abs(new Date().getTimezoneOffset());
